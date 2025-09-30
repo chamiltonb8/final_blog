@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-![paulskenes](paulskenes.png){width=50% fig-align="center"}
+![Paul Skenes - Pitcher](paulskenes.png){width=50% fig-align="center"}
 
 
 # Batter Up!! 

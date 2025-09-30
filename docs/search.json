@@ -2,61 +2,89 @@
   {
     "objectID": "projects/tutorial.html",
     "href": "projects/tutorial.html",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "",
-    "text": "paulskenes",
+    "text": "Paul Skenes - Pitcher",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
   },
   {
     "objectID": "projects/tutorial.html#first-base",
     "href": "projects/tutorial.html#first-base",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "First Base",
     "text": "First Base\nThis tutorial assumes you have a basic understanding of python and matplotlib! So with that, we’ll dive right into it. if you’re ever wanting a better explanation of matplot lib check out this github repository (its the offical one)! Official Github Matplotlib Repository\n\nLeading off\nIn order to accomplish this lab you need to have the matplotlib and your chosen data if not, you will not be able to accomplish this tutorial!\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"2019_pitches.csv\")\n\n\n\n\nmatplotlib and pandas\nThe matplotlib python library allows you to create more meaningful and detailed plots. Those plots will be better designed and more informative to your audience.\nPandas is what are going to use to import our .csv file to a dataframe which allows us to create plots and do analysis on it! For more on pandas check out the offical pandas website!! Official Pandas Website",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
   },
   {
     "objectID": "projects/tutorial.html#second-base",
     "href": "projects/tutorial.html#second-base",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Second Base",
-    "text": "Second Base\nAfter you’ve loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I’ll be\nFirst, we’ll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting.\n\n\nCode\n#taking the x and y coordiates to numberical data rather than just text\ndf['px'] = pd.to_numeric(df['px'], errors='coerce')\ndf['pz'] = pd.to_numeric(df['pz'], errors='coerce')\n\n#removing any null values \ndf = df.dropna(subset=['px', 'pz'])\n\n#naming the data frames x and y for simplicity\nx = df['px']\ny = df['pz']",
+    "text": "Second Base\nAfter you’ve loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I’ll be\nFirst, we’ll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting.\n\n\nCode\n# Convert to numeric\ndf['px'] = pd.to_numeric(df['px'], errors='coerce')\ndf['pz'] = pd.to_numeric(df['pz'], errors='coerce')\n\n# Remove null values \ndf = df.dropna(subset=['px', 'pz'])\n\n# Simplify for plotting\nx = df['px']\ny = df['pz']",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
   },
   {
     "objectID": "projects/tutorial.html#third-base",
     "href": "projects/tutorial.html#third-base",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Third Base",
-    "text": "Third Base\nAfter we have our data set up and cleaned, we’re able to set up our plot environment. Matplotlib allows you to set how large your figure is going to be in your markdown file. I’m going to be using a 2 dimensional histogram (it’s kinda like making a checkerboard out of my x value histogram and my y value histogram).\n\nImportant reminders when it comes to making plots.\n\nFigure size is super important!!\nA lot of this will be trial and error (such as selecting the bin size)\nYou can choose whatever color you want by using “cmap=”\n\n\n\nCode\n#set the size of the figure\nplt.figure(figsize=(6, 7))\n#import your data into the histogram, select the amount of bins, and the color you want on your chart. \nplt.hist2d(x, y, bins=75, cmap='Reds')\n\n# Gradiant legend\nplt.colorbar(label='Pitch Density')\n\n#plotted the strike zone\nplt.plot([-0.83, -0.83, 0.83, 0.83, -0.83],\n         [1.5, 3.5, 3.5, 1.5, 1.5],\n         color='black', linewidth=2)\n\n#adjusted what we were looking at in the graph\nplt.xlim(-2, 2)\nplt.ylim(0, 6.5)\n\n#added titles and axis labels for clarity\nplt.xlabel(\"Horizontal Location (ft)\")\nplt.ylabel(\"Vertical Location (ft)\")\nplt.title(\"Pitch Location Heatmap - 2019\")\n\n#helps to maintain the square aspects of the graph\nplt.gca().set_aspect('equal')\n\n#told python to show me the graph. \nplt.show()",
+    "text": "Third Base\nWith clean data, we can set up our plot environment. Here, we’ll use a 2D histogram (think of it as combining x and y histograms into a grid).\n\nImportant reminders when it comes to making plots.\n\nFigure size matters - it affects readability,\nTrial and error is often needed (e.g. selecting the bin size),\nColors can really make your data pop!\n\n\n\nCode\n# Set figure size\nplt.figure(figsize=(6, 7))\n\n# Create 2D histogram\nplt.hist2d(x, y, bins=75, cmap='Reds')\n\n# Add gradient legend\nplt.colorbar(label='Pitch Density')\n\n# Draw strike zone\nplt.plot([-0.83, -0.83, 0.83, 0.83, -0.83],\n         [1.5, 3.5, 3.5, 1.5, 1.5],\n         color='black', linewidth=2)\n\n# Adjust viewing window\nplt.xlim(-2, 2)\nplt.ylim(0, 6.5)\n\n# Add labels and title\nplt.xlabel(\"Horizontal Location (ft)\")\nplt.ylabel(\"Vertical Location (ft)\")\nplt.title(\"Pitch Location Heatmap - 2019\")\n\n# Keep square aspect ratio\nplt.gca().set_aspect('equal')\n\nplt.show()",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
   },
   {
     "objectID": "projects/tutorial.html#home-stretch",
     "href": "projects/tutorial.html#home-stretch",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Home Stretch",
-    "text": "Home Stretch\nAt this point in time, you could use the “plt.show()” function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive.\nWhat I did: - Added a Gradient legend to show where the most picthes were thrown. - Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone. - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.",
+    "text": "Home Stretch\nThe plt.show() function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.\nWhat we did in this tutorial: - Used matplotlib to create a more mreaningful visualization, - Used pandas in conjuncture with matplotlib, - Created a basic visualiaztion - Added a bunch of different cosmestic helps to our visualization - Added a gradient legend - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
   },
   {
     "objectID": "projects/tutorial.html#home-plate",
     "href": "projects/tutorial.html#home-plate",
-    "title": "matplotlib Tutorial: Baseball edition",
+    "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Home Plate",
-    "text": "Home Plate\nHopefully this tutorial has been able to help you understand a little bit more about matplotlib for visualizations! Being able to use matplot lib is vital in data science because it’s how we share our findings with others.",
+    "text": "Home Plate\nHopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.",
     "crumbs": [
-      "matplotlib Tutorial: Baseball edition"
+      "Matplotlib Tutorial: Baseball Edition"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Welcome to my data science portfolio! I’m super excited to share with you some of the projects, skills and knowledge I’ve been building as I learn more about data science and analytics. I have a passion for using data to solve problems and tell stories, and this portfolio is a reflection of that journey!\n\n\nThis portfolio shows my work learning data science. Each project includes:\n\nMy code with documentation\nVisualizations I created\nWhat I learned and discovered\nAny fun insights I find along the way\n\nI built this site using Quarto and host it on GitHub Pages.\n\n\n\n\nProgramming: Python, Python libraries (matplotlib, pandas, numpy, etc.), C++, and R\nVisualization: Creating charts with Matplotlib, Seaborn, and ggplot2\nData Collection: Getting data from files, websites, and APIs\nAnalysis: Finding patterns and answering questions with data (this is my favorite part!)\n\n\n\n\n\n\n\nLearn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
+  },
+  {
+    "objectID": "index.html#about-this-portfolio",
+    "href": "index.html#about-this-portfolio",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "This portfolio shows my work learning data science. Each project includes:\n\nMy code with documentation\nVisualizations I created\nWhat I learned and discovered\nAny fun insights I find along the way\n\nI built this site using Quarto and host it on GitHub Pages."
+  },
+  {
+    "objectID": "index.html#skills-im-learning",
+    "href": "index.html#skills-im-learning",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Programming: Python, Python libraries (matplotlib, pandas, numpy, etc.), C++, and R\nVisualization: Creating charts with Matplotlib, Seaborn, and ggplot2\nData Collection: Getting data from files, websites, and APIs\nAnalysis: Finding patterns and answering questions with data (this is my favorite part!)"
+  },
+  {
+    "objectID": "index.html#my-projects",
+    "href": "index.html#my-projects",
+    "title": "Welcome to My Data Science Portfolio",
+    "section": "",
+    "text": "Learn how I explore datasets to find interesting patterns and answer questions.\n\n\n\nSee how I gather data from different sources and prepare it for analysis.\n\n\n\nSee how I tackle a data science project beginning to end.\n\n\n\nThanks for visiting! Feel free to explore my projects and see what I’m learning."
   }
 ]
