@@ -1,0 +1,111 @@
+---
+title: "matplotlib Tutorial: Baseball edition"
+author: Cameron Hamilton
+date: "2025-09-29"
+format:
+  html:
+    code-fold: true
+    toc: true
+---
+
+
+# Batter Up!! 
+
+Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.
+
+## First Base
+
+This tutorial assumes you have a basic understanding of python and matplotlib! So with that, we'll dive right into it. if you're ever wanting a better explanation of matplot lib check out this github repository (its the offical one)! [Official Github Matplotlib Repository](https://github.com/matplotlib/matplotlib)
+
+### Leading off
+
+In order to accomplish this lab **you need to have the matplotlib and your chosen data** if not, *you will not be able to accomplish this tutorial!* 
+
+```{python}
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv("2019_pitches.csv")
+```
+
+### matplotlib and pandas
+
+The matplotlib python library allows you to create more meaningful and detailed plots. Those plots will be better designed and more informative to your audience. 
+
+Pandas is what are going to use to import our .csv file to a dataframe which allows us to create plots and do analysis on it! For more on pandas check out the offical pandas website!! [Official Pandas Website](https://pandas.pydata.org/)
+
+
+## Second Base
+
+After you've loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I'll be 
+
+First, we'll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting. 
+```{python}
+#taking the x and y coordiates to numberical data rather than just text
+df['px'] = pd.to_numeric(df['px'], errors='coerce')
+df['pz'] = pd.to_numeric(df['pz'], errors='coerce')
+
+#removing any null values 
+df = df.dropna(subset=['px', 'pz'])
+
+#naming the data frames x and y for simplicity
+x = df['px']
+y = df['pz']
+```
+
+
+## Third Base
+
+After we have our data set up and cleaned, we're able to set up our plot environment. Matplotlib allows you to set how large your figure is going to be in your markdown file. I'm going to be using a 2 dimensional histogram (it's kinda like making a checkerboard out of my x value histogram and my y value histogram). 
+
+### Important reminders when it comes to making plots. 
+- Figure size is super important!!
+- A lot of this will be trial and error (such as selecting the bin size)
+- You can choose whatever color you want by using "cmap="
+
+```{python}
+#set the size of the figure
+plt.figure(figsize=(6, 7))
+#import your data into the histogram, select the amount of bins, and the color you want on your chart. 
+plt.hist2d(x, y, bins=75, cmap='Reds')
+```
+
+## Home Stretch
+
+At this point in time, you could use the "plt.show()" function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive. 
+
+**What I did:**
+- Added a Gradiant legend to show where the most picthes were thrown
+- Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone
+- Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
+- Added labels for to better describe what I want my viewer to know about the graph.
+
+
+```{python}
+# Gradiant legend
+plt.colorbar(label='Pitch Density')
+
+#plotted the strike zone
+plt.plot([-0.83, -0.83, 0.83, 0.83, -0.83],
+         [1.5, 3.5, 3.5, 1.5, 1.5],
+         color='black', linewidth=2)
+
+#adjusted what we were looking at in the graph
+plt.xlim(-2, 2)
+plt.ylim(0, 6.5)
+
+#added titles and axis labels for clarity
+plt.xlabel("Horizontal Location (ft)")
+plt.ylabel("Vertical Location (ft)")
+plt.title("Pitch Location Heatmap - 2019")
+
+#helps to maintain the square aspects of the graph
+plt.gca().set_aspect('equal')
+
+#told python to show me the graph. 
+plt.show()
+```
+
+## Home Plate
+
+Hopefully this tutorial has been able to help you understand a little bit more about matplotlib for visualizations! Being able to use matplot lib is vital in data science because it's how we share our findings with others. 
