@@ -68,20 +68,7 @@ After we have our data set up and cleaned, we're able to set up our plot environ
 plt.figure(figsize=(6, 7))
 #import your data into the histogram, select the amount of bins, and the color you want on your chart. 
 plt.hist2d(x, y, bins=75, cmap='Reds')
-```
 
-## Home Stretch
-
-At this point in time, you could use the "plt.show()" function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive. 
-
-**What I did:**
-- Added a Gradiant legend to show where the most picthes were thrown
-- Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone
-- Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
-- Added labels for to better describe what I want my viewer to know about the graph.
-
-
-```{python}
 # Gradiant legend
 plt.colorbar(label='Pitch Density')
 
@@ -105,6 +92,17 @@ plt.gca().set_aspect('equal')
 #told python to show me the graph. 
 plt.show()
 ```
+
+## Home Stretch
+
+At this point in time, you could use the "plt.show()" function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive. 
+
+**What I did:**
+- Added a Gradiant legend to show where the most picthes were thrown
+- Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone
+- Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
+- Added labels for to better describe what I want my viewer to know about the graph.
+
 
 ## Home Plate
 
