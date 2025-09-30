@@ -1,5 +1,87 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Cameron Hamilton and I am a Senior at Brigham Young University studying Statistics and Data Science. I have long loved data analytics and have experience working with python, SQL, R, and am currently learning c++. I am wanting to start my own business and be an entrepreneur of sorts in the future. I am wanting to learn more about data science and analytics to help me in my future career. As I’m learning more about data science I will be updating this portfolio with projects and assignments that I complete."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "",
+    "text": "My name is Cameron Hamilton and I am a Senior at Brigham Young University studying Statistics and Data Science. I have long loved data analytics and have experience working with python, SQL, R, and am currently learning c++. I am wanting to start my own business and be an entrepreneur of sorts in the future. I am wanting to learn more about data science and analytics to help me in my future career. As I’m learning more about data science I will be updating this portfolio with projects and assignments that I complete."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "Education",
+    "text": "Education\n\nStatistics Data Science - Brigham Young University, 2026 (Expected)\nRelevant Coursework: Statistics, Data Analysis, Programming, Data Structures, Math, Business, Accounting, Finance, Marketing, etc."
+  },
+  {
+    "objectID": "about.html#skills-interests",
+    "href": "about.html#skills-interests",
+    "title": "About Me",
+    "section": "Skills & Interests",
+    "text": "Skills & Interests\n\nTechnical Skills\n\nProgramming: Python, R, SQL, C++\nData Analysis: Pandas, NumPy, SciPy, Statistical Modeling\nVisualization: Matplotlib, Seaborn, ggplot2\nMachine Learning: Scikit-learn\nTools: Jupyter Notebooks, Git/GitHub\n\n\n\nAreas of Interest\n\nData Analytics\nBusiness Intelligence\nPredictive Modeling\nEntrepreneurship\nBusiness Strategy\nBusiness analytics\nSports analytics\nSkiing Analytics"
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Me",
+    "section": "Goals",
+    "text": "Goals\nDescribe what you hope to achieve through your data science journey:\n\nShort-term I want to find a career that will help me grow and leanr more abou data science and analytics. Something that will challenge me and help me grow my skills.\nLong-term career I want to start my own business and be an entrepreneur. I want to use data science and analytics to help me make informed decisions for my business. I’m also wanting to recieve my MBA and PhD in Statistics\nI want to continue learning and growing my skills in data science and analytics. I want to stay up-to-date with the latest trends and technologies in the field."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About Me",
+    "section": "Contact",
+    "text": "Contact\n\nEmail: chamiltonb8@gmail.com\nGitHub: github.com/chamiltonb8\nLinkedIn: linkedin\n\n\nThis portfolio showcases my learning progress and projects completed during my data science studies."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects Overview",
+    "section": "",
+    "text": "Description: Pick a dataset and explore it to discover insights and answer questions.\n\n\n\nDescription: Find an interesting data source, collect the data, and prepare it for analysis.\n\n\n\nDescription: A comprehensive project that shows off my data science skills.",
+    "crumbs": [
+      "Projects Overview"
+    ]
+  },
+  {
+    "objectID": "projects/index.html#all-projects",
+    "href": "projects/index.html#all-projects",
+    "title": "Projects Overview",
+    "section": "",
+    "text": "Description: Pick a dataset and explore it to discover insights and answer questions.\n\n\n\nDescription: Find an interesting data source, collect the data, and prepare it for analysis.\n\n\n\nDescription: A comprehensive project that shows off my data science skills.",
+    "crumbs": [
+      "Projects Overview"
+    ]
+  },
+  {
+    "objectID": "projects/eda.html",
+    "href": "projects/eda.html",
+    "title": "EDA Project",
+    "section": "",
+    "text": "This is coming down the pipeline. Check again later.",
+    "crumbs": [
+      "EDA Project"
+    ]
+  },
+  {
+    "objectID": "projects/data-acquisition.html",
+    "href": "projects/data-acquisition.html",
+    "title": "Data Acquisition Project",
+    "section": "",
+    "text": "This is coming down the pipeline. Check again later.",
+    "crumbs": [
+      "Data Acquisition Project"
+    ]
+  },
+  {
     "objectID": "projects/tutorial.html",
     "href": "projects/tutorial.html",
     "title": "Matplotlib Tutorial: Baseball Edition",
@@ -57,6 +139,16 @@
     "text": "Home Plate\nHopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.",
     "crumbs": [
       "Matplotlib Tutorial: Baseball Edition"
+    ]
+  },
+  {
+    "objectID": "projects/final-project.html",
+    "href": "projects/final-project.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "This is coming down the pipeline. Check again later.",
+    "crumbs": [
+      "Final Project"
     ]
   },
   {

@@ -13,7 +13,7 @@ format:
 
 # Batter Up!! 
 
-Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.
+Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. Visualizations can be hard to create as well. However, by using the matplotlib library in python we can create the best visualizations. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.
 
 ## First Base
 
@@ -103,15 +103,17 @@ plt.show()
 The `plt.show()` function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.
 
 **What we did in this tutorial:**
-- Used matplotlib to create a more mreaningful visualization,
-- Used pandas in conjuncture with matplotlib,
+- Used matplotlib to create a more mreaningful visualization
+- Used pandas in conjuncture with matplotlib
 - Created a basic visualiaztion
 - Added a bunch of different cosmestic helps to our visualization
-  - Added a gradient legend
-  - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
-  - Added labels for to better describe what I want my viewer to know about the graph.
+- Added a gradient legend
+- Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
+- Added labels for to better describe what I want my viewer to know about the graph.
 
 
 ## Home Plate
 
 Hopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.
+
+So go out and try it on your own!! Find a dataset for something that you like and create a cool visualization for it, good luck!! 
