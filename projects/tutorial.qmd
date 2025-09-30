@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-![paulskenes](projects/paulskenes.jpeg){width=50% fig-align="center"}
+![paulskenes](projects/paulskenes.png){width=50% fig-align="center"}
 
 
 # Batter Up!! 

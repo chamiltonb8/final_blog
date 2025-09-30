@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "projects/tutorial.html",
+    "href": "projects/tutorial.html",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "",
+    "text": "paulskenes",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  },
+  {
+    "objectID": "projects/tutorial.html#first-base",
+    "href": "projects/tutorial.html#first-base",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "First Base",
+    "text": "First Base\nThis tutorial assumes you have a basic understanding of python and matplotlib! So with that, we’ll dive right into it. if you’re ever wanting a better explanation of matplot lib check out this github repository (its the offical one)! Official Github Matplotlib Repository\n\nLeading off\nIn order to accomplish this lab you need to have the matplotlib and your chosen data if not, you will not be able to accomplish this tutorial!\n\n\nCode\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"2019_pitches.csv\")\n\n\n\n\nmatplotlib and pandas\nThe matplotlib python library allows you to create more meaningful and detailed plots. Those plots will be better designed and more informative to your audience.\nPandas is what are going to use to import our .csv file to a dataframe which allows us to create plots and do analysis on it! For more on pandas check out the offical pandas website!! Official Pandas Website",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  },
+  {
+    "objectID": "projects/tutorial.html#second-base",
+    "href": "projects/tutorial.html#second-base",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "Second Base",
+    "text": "Second Base\nAfter you’ve loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I’ll be\nFirst, we’ll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting.\n\n\nCode\n#taking the x and y coordiates to numberical data rather than just text\ndf['px'] = pd.to_numeric(df['px'], errors='coerce')\ndf['pz'] = pd.to_numeric(df['pz'], errors='coerce')\n\n#removing any null values \ndf = df.dropna(subset=['px', 'pz'])\n\n#naming the data frames x and y for simplicity\nx = df['px']\ny = df['pz']",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  },
+  {
+    "objectID": "projects/tutorial.html#third-base",
+    "href": "projects/tutorial.html#third-base",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "Third Base",
+    "text": "Third Base\nAfter we have our data set up and cleaned, we’re able to set up our plot environment. Matplotlib allows you to set how large your figure is going to be in your markdown file. I’m going to be using a 2 dimensional histogram (it’s kinda like making a checkerboard out of my x value histogram and my y value histogram).\n\nImportant reminders when it comes to making plots.\n\nFigure size is super important!!\nA lot of this will be trial and error (such as selecting the bin size)\nYou can choose whatever color you want by using “cmap=”\n\n\n\nCode\n#set the size of the figure\nplt.figure(figsize=(6, 7))\n#import your data into the histogram, select the amount of bins, and the color you want on your chart. \nplt.hist2d(x, y, bins=75, cmap='Reds')\n\n# Gradiant legend\nplt.colorbar(label='Pitch Density')\n\n#plotted the strike zone\nplt.plot([-0.83, -0.83, 0.83, 0.83, -0.83],\n         [1.5, 3.5, 3.5, 1.5, 1.5],\n         color='black', linewidth=2)\n\n#adjusted what we were looking at in the graph\nplt.xlim(-2, 2)\nplt.ylim(0, 6.5)\n\n#added titles and axis labels for clarity\nplt.xlabel(\"Horizontal Location (ft)\")\nplt.ylabel(\"Vertical Location (ft)\")\nplt.title(\"Pitch Location Heatmap - 2019\")\n\n#helps to maintain the square aspects of the graph\nplt.gca().set_aspect('equal')\n\n#told python to show me the graph. \nplt.show()",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  },
+  {
+    "objectID": "projects/tutorial.html#home-stretch",
+    "href": "projects/tutorial.html#home-stretch",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "Home Stretch",
+    "text": "Home Stretch\nAt this point in time, you could use the “plt.show()” function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive.\nWhat I did: - Added a Gradiant legend to show where the most picthes were thrown - Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  },
+  {
+    "objectID": "projects/tutorial.html#home-plate",
+    "href": "projects/tutorial.html#home-plate",
+    "title": "matplotlib Tutorial: Baseball edition",
+    "section": "Home Plate",
+    "text": "Home Plate\nHopefully this tutorial has been able to help you understand a little bit more about matplotlib for visualizations! Being able to use matplot lib is vital in data science because it’s how we share our findings with others.",
+    "crumbs": [
+      "matplotlib Tutorial: Baseball edition"
+    ]
+  }
+]
