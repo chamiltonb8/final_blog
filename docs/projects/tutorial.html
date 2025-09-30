@@ -304,14 +304,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="batter-up" class="level1">
 <h1>Batter Up!!</h1>
-<p>Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.</p>
+<p>Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. Visualizations can be hard to create as well. However, by using the matplotlib library in python we can create the best visualizations. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.</p>
 <section id="first-base" class="level2">
 <h2 class="anchored" data-anchor-id="first-base">First Base</h2>
 <p>This tutorial assumes you have a basic understanding of python and matplotlib! So with that, we’ll dive right into it. if you’re ever wanting a better explanation of matplot lib check out this github repository (its the offical one)! <a href="https://github.com/matplotlib/matplotlib">Official Github Matplotlib Repository</a></p>
 <section id="leading-off" class="level3">
 <h3 class="anchored" data-anchor-id="leading-off">Leading off</h3>
 <p>In order to accomplish this lab <strong>you need to have the matplotlib and your chosen data</strong> if not, <em>you will not be able to accomplish this tutorial!</em></p>
-<div id="9fe6bd5e" class="cell" data-execution_count="1">
+<div id="92c11f57" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="second-base">Second Base</h2>
 <p>After you’ve loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I’ll be</p>
 <p>First, we’ll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting.</p>
-<div id="c31b1bd8" class="cell" data-execution_count="2">
+<div id="104dd393" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to numeric</span></span>
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Trial and error is often needed (e.g.&nbsp;selecting the bin size),</li>
 <li>Colors can really make your data pop!</li>
 </ul>
-<div id="8c1feb8c" class="cell" data-execution_count="3">
+<div id="beadc3eb" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set figure size</span></span>
@@ -401,11 +401,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="home-stretch" class="level2">
 <h2 class="anchored" data-anchor-id="home-stretch">Home Stretch</h2>
 <p>The <code>plt.show()</code> function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.</p>
-<p><strong>What we did in this tutorial:</strong> - Used matplotlib to create a more mreaningful visualization, - Used pandas in conjuncture with matplotlib, - Created a basic visualiaztion - Added a bunch of different cosmestic helps to our visualization - Added a gradient legend - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.</p>
+<p><strong>What we did in this tutorial:</strong> - Used matplotlib to create a more mreaningful visualization - Used pandas in conjuncture with matplotlib - Created a basic visualiaztion - Added a bunch of different cosmestic helps to our visualization - Added a gradient legend - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.</p>
 </section>
 <section id="home-plate" class="level2">
 <h2 class="anchored" data-anchor-id="home-plate">Home Plate</h2>
 <p>Hopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.</p>
+<p>So go out and try it on your own!! Find a dataset for something that you like and create a cool visualization for it, good luck!!</p>
 
 
 <!-- -->
@@ -880,7 +881,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># Batter Up!! </span></span>
 <span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>Far too often, I see (and have created) visualizations that are cluttered, hard to read, and honestly look unprofessional and messy. Visualizations can be hard to create as well. However, by using the matplotlib library in python we can create the best visualizations. This is a tutorial that will walk you through how to use matplotlib to create clean, easy to read and professional looking visualizations!! We will be using a heatmap as an example, but the principles can be applied to any type of visualization.</span>
 <span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## First Base</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
@@ -970,18 +971,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>The <span class="in">`plt.show()`</span> function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.</span>
 <span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>**What we did in this tutorial:**</span>
-<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used matplotlib to create a more mreaningful visualization,</span>
-<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used pandas in conjuncture with matplotlib,</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used matplotlib to create a more mreaningful visualization</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used pandas in conjuncture with matplotlib</span>
 <span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Created a basic visualiaztion</span>
 <span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Added a bunch of different cosmestic helps to our visualization</span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Added a gradient legend</span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. </span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>Added labels for to better describe what I want my viewer to know about the graph.</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Added a gradient legend</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. </span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Added labels for to better describe what I want my viewer to know about the graph.</span>
 <span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="fu">## Home Plate</span></span>
 <span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>Hopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>So go out and try it on your own!! Find a dataset for something that you like and create a cool visualization for it, good luck!! </span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

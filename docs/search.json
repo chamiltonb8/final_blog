@@ -126,7 +126,7 @@
     "href": "projects/tutorial.html#home-stretch",
     "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Home Stretch",
-    "text": "Home Stretch\nThe plt.show() function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.\nWhat we did in this tutorial: - Used matplotlib to create a more mreaningful visualization, - Used pandas in conjuncture with matplotlib, - Created a basic visualiaztion - Added a bunch of different cosmestic helps to our visualization - Added a gradient legend - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.",
+    "text": "Home Stretch\nThe plt.show() function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.\nWhat we did in this tutorial: - Used matplotlib to create a more mreaningful visualization - Used pandas in conjuncture with matplotlib - Created a basic visualiaztion - Added a bunch of different cosmestic helps to our visualization - Added a gradient legend - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. - Added labels for to better describe what I want my viewer to know about the graph.",
     "crumbs": [
       "Matplotlib Tutorial: Baseball Edition"
     ]
@@ -136,7 +136,7 @@
     "href": "projects/tutorial.html#home-plate",
     "title": "Matplotlib Tutorial: Baseball Edition",
     "section": "Home Plate",
-    "text": "Home Plate\nHopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.",
+    "text": "Home Plate\nHopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.\nSo go out and try it on your own!! Find a dataset for something that you like and create a cool visualization for it, good luck!!",
     "crumbs": [
       "Matplotlib Tutorial: Baseball Edition"
     ]
