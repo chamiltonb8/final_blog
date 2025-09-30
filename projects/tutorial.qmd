@@ -1,5 +1,5 @@
 ---
-title: "matplotlib Tutorial: Baseball edition"
+title: "Matplotlib Tutorial: Baseball Edition"
 author: Cameron Hamilton
 date: "2025-09-29"
 format:
@@ -8,7 +8,7 @@ format:
     toc: true
 ---
 
-![paulskenes](projects/paulskenes.png){width=50% fig-align="center"}
+![paulskenes](paulskenes.png){width=50% fig-align="center"}
 
 
 # Batter Up!! 
@@ -42,70 +42,76 @@ Pandas is what are going to use to import our .csv file to a dataframe which all
 After you've loaded in matplotlib and pandas the next most important part is to load in your data and convert it to data frames for analysis! For this example, I'll be 
 
 First, we'll use the pandtas library to convert the csv file into a data frame, remove the null values and change the data frame names to x and y for simplicity in plotting. 
+
 ```{python}
-#taking the x and y coordiates to numberical data rather than just text
+# Convert to numeric
 df['px'] = pd.to_numeric(df['px'], errors='coerce')
 df['pz'] = pd.to_numeric(df['pz'], errors='coerce')
 
-#removing any null values 
+# Remove null values 
 df = df.dropna(subset=['px', 'pz'])
 
-#naming the data frames x and y for simplicity
+# Simplify for plotting
 x = df['px']
 y = df['pz']
+
 ```
 
 
 ## Third Base
 
-After we have our data set up and cleaned, we're able to set up our plot environment. Matplotlib allows you to set how large your figure is going to be in your markdown file. I'm going to be using a 2 dimensional histogram (it's kinda like making a checkerboard out of my x value histogram and my y value histogram). 
+With clean data, we can set up our plot environment. Here, we’ll use a 2D histogram (think of it as combining x and y histograms into a grid).
 
 ### Important reminders when it comes to making plots. 
-- Figure size is super important!!
-- A lot of this will be trial and error (such as selecting the bin size)
-- You can choose whatever color you want by using "cmap="
+- Figure size matters - it affects readability,
+- Trial and error is often needed (e.g. selecting the bin size),
+- Colors can really make your data pop! 
 
 ```{python}
-#set the size of the figure
+# Set figure size
 plt.figure(figsize=(6, 7))
-#import your data into the histogram, select the amount of bins, and the color you want on your chart. 
+
+# Create 2D histogram
 plt.hist2d(x, y, bins=75, cmap='Reds')
 
-# Gradiant legend
+# Add gradient legend
 plt.colorbar(label='Pitch Density')
 
-#plotted the strike zone
+# Draw strike zone
 plt.plot([-0.83, -0.83, 0.83, 0.83, -0.83],
          [1.5, 3.5, 3.5, 1.5, 1.5],
          color='black', linewidth=2)
 
-#adjusted what we were looking at in the graph
+# Adjust viewing window
 plt.xlim(-2, 2)
 plt.ylim(0, 6.5)
 
-#added titles and axis labels for clarity
+# Add labels and title
 plt.xlabel("Horizontal Location (ft)")
 plt.ylabel("Vertical Location (ft)")
 plt.title("Pitch Location Heatmap - 2019")
 
-#helps to maintain the square aspects of the graph
+# Keep square aspect ratio
 plt.gca().set_aspect('equal')
 
-#told python to show me the graph. 
 plt.show()
+
 ```
 
 ## Home Stretch
 
-At this point in time, you could use the "plt.show()" function to plot your visualization (it would probably look super nice!!) However, for readability and functionality it might be best to add a few labels!! There are thousands of options of things that you can do to improve your visualizations, and what I did is just a small example of things you can do! Challenge yourself to find new things you can make your charts more intuitive. 
+The `plt.show()` function displays your visualization. But to really make it effective, you should always consider adding labels, context, and guides for your audience.
 
-**What I did:**
-- Added a Gradient legend to show where the most picthes were thrown.
-- Plotted a Strike Zone onto my plot to see if the majority of pitches were in the strike zone.
-- Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
-- Added labels for to better describe what I want my viewer to know about the graph.
+**What we did in this tutorial:**
+- Used matplotlib to create a more mreaningful visualization,
+- Used pandas in conjuncture with matplotlib,
+- Created a basic visualiaztion
+- Added a bunch of different cosmestic helps to our visualization
+  - Added a gradient legend
+  - Adjusted the viewable dimensions to see 2 feet right or left of the strike zone and up to 6.5 feet. 
+  - Added labels for to better describe what I want my viewer to know about the graph.
 
 
 ## Home Plate
 
-Hopefully this tutorial has been able to help you understand a little bit more about matplotlib for visualizations! Being able to use matplot lib is vital in data science because it's how we share our findings with others. 
+Hopefully this tutorial has helped you understand how to create clear, professional visualizations in matplotlib. Strong visualization skills are essential in data science—they allow you to share insights, not just numbers.
