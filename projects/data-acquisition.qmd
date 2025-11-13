@@ -1,11 +1,189 @@
 ---
-title: "Data Acquisition Project"
-author: "Your Name"
-date: "2025-01-01"
+title: "Data Acquisition Project: John Mayer Setlist Evolution"
+author: "Cameron Hamilton"
+date: "2025-11-12"
 format:
   html:
     code-fold: true
     toc: true
 ---
 
-This is coming down the pipeline. Check again later.
+# Where the Light is 🎸
+
+John Mayer has long been my favorite music artist. From his tasteful guitar solos, to the beautiful songwriting and deep vocals. I've been to a few of his concerts and He always manages to pick the perfect set list for the vibe of the city. I've always wondered what the motivating factor is for musicians to put the songs they put in their concert setlists. So I decided to look into that a bit more! So my question in full is **What can I learn about John Mayer's Concert Setlists** 
+
+![John Mayer](JohnMayerin2019.png.png){width=50% fig-align="center"}
+
+## Data Acquisition 
+
+In order to have a dataset that I wanted, I needed to pull from two different APIs and Websites. I used Setlist.fm in order to look at different concert setlists. I also used Spotify's API to look at the different metrics they use when creating algorithims. Both are free to use and I did so ethically There is a github repo at [John Mayer Github Repo](https://github.com/chamiltonb8/stat_386_music-John-Mayer)
+
+I originally intended to use Spotify's api, however I couldn't quite get it to work! So I just decided to use the Setlist.fm api. However, that link above will show some of my work with the Spotify api key. 
+
+
+## EDA 
+
+Here is a short and sweet Data Analysis for my .csv file that I created! Mostly I learned about what were the most rare songs in his setlists, what the most popular songs were. where he played most of his shows in the last few years, and that some of his concerts only featured 1 song. Where as a few featured upwards of 25! 
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df = pd.read_csv("final_setlists_john_mayer.csv", parse_dates=["show_date"])
+
+# Keep only rows with audio features
+audio_cols = ["danceability", "energy", "valence", "tempo", "loudness"]
+audio_cols = [c for c in audio_cols if c in df.columns]
+df_audio = df.dropna(subset=audio_cols)
+
+df.head()
+```
+
+### Most Common Songs
+
+Here is a chart of the most common songs from the tours that he did! I thought this was interesting since it shows some of his more popular songs. One that surprised me though is "Who Says" It's a popular song, but it's not one that I would consider one of his best! "Slow Dancing in a Burning Room" Works perfectly though. 
+
+```{python}
+song_counts = (
+    df.groupby("song")["show_id"]
+      .nunique()
+      .sort_values(ascending=False)
+      .head(15)
+)
+
+plt.figure(figsize=(8, 6))
+
+# reverse for nicer top-to-bottom ordering
+songs = song_counts.index.tolist()[::-1]
+counts = song_counts.values.tolist()[::-1]
+
+plt.barh(songs, counts)
+plt.xlabel("Number of Shows Played")
+plt.ylabel("Song")
+plt.title("Top 15 Most-Played Songs Across Shows")
+plt.tight_layout()
+plt.show()
+```
+
+
+### Where He visited the Most
+
+John Mayer has visited Los Angeles the Most for his shows! this is a cool chart that also shows that Amsterdam was the second most visited. 
+
+```{python}
+city_counts = (
+    df.groupby("city")["show_id"]
+      .nunique()
+      .sort_values(ascending=False)
+      .head(10)
+)
+
+plt.figure(figsize=(8, 6))
+cities = city_counts.index.tolist()[::-1]
+counts = city_counts.values.tolist()[::-1]
+
+plt.barh(cities, counts)
+plt.xlabel("Number of Shows")
+plt.ylabel("City")
+plt.title("Top 10 Cities for John Mayer Shows")
+plt.tight_layout()
+plt.show()
+```
+
+### Song Position in Set list (also how many songs were in each concert)
+
+I found it cool that there were a few concerts that only had one song! 
+
+```{python}
+plt.figure(figsize=(8, 5))
+plt.hist(df["position"], bins=range(1, df["position"].max() + 2), edgecolor="black")
+plt.xlabel("Song Position in Set")
+plt.ylabel("Count")
+plt.title("Distribution of Song Positions in Setlists")
+plt.tight_layout()
+plt.show()
+```
+
+
+### Rarity of Songs
+
+And finally here are the most rare songs per performance
+
+```{python}
+import pandas as pd
+
+df = pd.read_csv("final_setlists_john_mayer.csv")
+
+rarity = (
+    df.dropna(subset=["rarity"])
+      .groupby("song")["rarity"]
+      .first()
+      .sort_values()
+)
+
+print("🎸 Rarest John Mayer Songs in These Setlists:\n")
+for song, r in rarity.head(20).items():  # top 20 rarest
+    print(f"{song} — rarity: {r:.3f}")
+```
+
+### Unique Songs Over Time
+I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert. 
+
+```{python}
+# Drop missing dates
+df2 = df.dropna(subset=["show_date"]).copy()
+
+# Sort chronologically
+df2 = df2.sort_values("show_date")
+
+# Identify when each song FIRST appeared
+first_plays = df2.groupby("song")["show_date"].min().sort_values()
+
+# Create cumulative count over time
+first_plays_df = (
+    first_plays
+    .reset_index()
+    .rename(columns={"show_date": "first_play_date"})
+    .sort_values("first_play_date")
+)
+
+first_plays_df["cumulative_unique_songs"] = range(1, len(first_plays_df) + 1)
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot(first_plays_df["first_play_date"],
+         first_plays_df["cumulative_unique_songs"],
+         marker="o", markersize=3, linewidth=1)
+
+plt.xlabel("Date")
+plt.ylabel("Cumulative Unique Songs")
+plt.title("Growth of John Mayer’s Live Song Catalog Over Time")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
+```
+
+
+## Encore
+
+I love John Mayer, he is one of my inspirations. Being able to do an EDA on some of his work has been awesome! To wrap up, here is another EDA based on my favorite John Mayer Song: *In Your Atmosphere*
+
+```{python}
+song_name = "In Your Atmosphere"
+df_song = df[df["song"].str.lower() == song_name.lower()]
+
+df_song.head()
+```
+
+### How many times has it been played? And what cities? 
+```{python}
+plays = df_song["show_id"].nunique()
+plays
+```
+
+```{python}
+cities = df_song["city"].dropna().unique()
+cities
+```
+
