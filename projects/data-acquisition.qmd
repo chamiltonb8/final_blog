@@ -4,45 +4,69 @@ author: "Cameron Hamilton"
 date: "2025-11-12"
 format:
   html:
-    code-fold: true
     toc: true
+    code-fold: true
 ---
 
-# Where the Light is 🎸
+# Where the Light Is 🎸
 
-John Mayer has long been my favorite music artist. From his tasteful guitar solos, to the beautiful songwriting and deep vocals. I've been to a few of his concerts and He always manages to pick the perfect set list for the vibe of the city. I've always wondered what the motivating factor is for musicians to put the songs they put in their concert setlists. So I decided to look into that a bit more! So my question in full is **What can I learn about John Mayer's Concert Setlists** 
+John Mayer has long been my favorite music artist!! from his tasteful guitar solos to his beautiful songwriting and vocal depth. I’ve been to a few of his concerts, and he always manages to choose a setlist that is unique while still makes sure we get all the hits. I wondered how those setlists stacked up against each other. That led to my motivating question:
 
-![John Mayer](JohnMayerin2019.png.png){width=50% fig-align="center"}
+### **What can I learn about how John Mayer builds his concert setlists?**
 
-## Data Acquisition 
+Below, I walk through how I acquired the data and highlight the most interesting findings from my exploratory data analysis.
 
-In order to have a dataset that I wanted, I needed to pull from two different APIs and Websites. I used Setlist.fm in order to look at different concert setlists. I also used Spotify's API to look at the different metrics they use when creating algorithims. Both are free to use and I did so ethically There is a github repo at [John Mayer Github Repo](https://github.com/chamiltonb8/stat_386_music-John-Mayer)
+![John Mayer](JohnMayerin2019.png){width=50% fig-align="center"}
 
-I originally intended to use Spotify's api, however I couldn't quite get it to work! So I just decided to use the Setlist.fm api. However, that link above will show some of my work with the Spotify api key. 
+---
 
+# Data Acquisition 
 
-## EDA 
+To build the dataset I wanted, I pulled from multiple online sources.
 
-Here is a short and sweet Data Analysis for my .csv file that I created! Mostly I learned about what were the most rare songs in his setlists, what the most popular songs were. where he played most of his shows in the last few years, and that some of his concerts only featured 1 song. Where as a few featured upwards of 25! 
+### **Primary API used**
+- **Setlist.fm API** — provided detailed information about each concert, including:
+  - venue  
+  - city  
+  - tour  
+  - date  
+  - complete setlist  
+  - encore structure  
+
+### **Secondary API (attempted)**
+I originally planned to also integrate:
+- **Spotify Web API** — for audio features like tempo, energy, valence, etc.
+
+Although I was able to access the api for Spotify, integrating the features cleanly took more time and effort than expected, so I proceeded with Setlist.fm alone for this version. My GitHub repo still includes the partial Spotify integration work. In a future project, I want to return to this analysis and add in those spotify features. 
+
+### **GitHub Repo (Code + Data)**
+👉 [John Mayer Setlist Project Repo](https://github.com/chamiltonb8/stat_386_music-John-Mayer)
+
+---
+
+# Exploratory Data Analysis (EDA)
+
+After cleaning and merging, my dataset contained:
+- most common songs  
+- rare songs  
+- concert cities  
+- set lengths  
+- song order behavior  
+- growth of his live catalog over time  
+
+Below are some of the clearest insights.
 
 ```{python}
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 df = pd.read_csv("final_setlists_john_mayer.csv", parse_dates=["show_date"])
-
-# Keep only rows with audio features
-audio_cols = ["danceability", "energy", "valence", "tempo", "loudness"]
-audio_cols = [c for c in audio_cols if c in df.columns]
-df_audio = df.dropna(subset=audio_cols)
-
 df.head()
 ```
 
-### Most Common Songs
+## Most Common Songs
 
-Here is a chart of the most common songs from the tours that he did! I thought this was interesting since it shows some of his more popular songs. One that surprised me though is "Who Says" It's a popular song, but it's not one that I would consider one of his best! "Slow Dancing in a Burning Room" Works perfectly though. 
+Here are the most-played songs across all concerts in the dataset. What surprised me most is that “Who Says” appears much more often than I expected. (about 14 times)“Slow Dancing in a Burning Room” His most recognizalbe song is number one right where I would expect it to be. 
 
 ```{python}
 song_counts = (
@@ -67,9 +91,9 @@ plt.show()
 ```
 
 
-### Where He visited the Most
+## Cities He's visited the Most
 
-John Mayer has visited Los Angeles the Most for his shows! this is a cool chart that also shows that Amsterdam was the second most visited. 
+John Mayer has visited Los Angeles the Most for his shows (He does have a house there)! this is a cool chart that also shows that Amsterdam was the second most visited. 
 
 ```{python}
 city_counts = (
@@ -91,7 +115,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-### Song Position in Set list (also how many songs were in each concert)
+## Distribution of Song Positions in Setlists
 
 I found it cool that there were a few concerts that only had one song! 
 
@@ -106,9 +130,9 @@ plt.show()
 ```
 
 
-### Rarity of Songs
+## Rarest Songs
 
-And finally here are the most rare songs per performance
+Here are the 20 rarest songs to hear at a John Mayer Concert! 
 
 ```{python}
 import pandas as pd
@@ -127,8 +151,9 @@ for song, r in rarity.head(20).items():  # top 20 rarest
     print(f"{song} — rarity: {r:.3f}")
 ```
 
-### Unique Songs Over Time
-I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert
+## Growth of Unique Songs Per Concert over time
+
+How quickly does John's live catalog grow? This line chart shows when each song first appeared and how his total number of unique songs increased over time.
 
 ```{python}
 # Drop missing dates
@@ -165,7 +190,7 @@ plt.show()
 ```
 
 
-## Encore
+# Encore: A mini EDA of my Favorite Song
 
 I love John Mayer, he is one of my inspirations. Being able to do an EDA on some of his work has been awesome! To wrap up, here is another EDA based on my favorite John Mayer Song: *In Your Atmosphere*
 
@@ -176,14 +201,82 @@ df_song = df[df["song"].str.lower() == song_name.lower()]
 df_song.head()
 ```
 
-### How many times has it been played? And what cities? 
+### How many times has it been played?
 ```{python}
 plays = df_song["show_id"].nunique()
 plays
 ```
 
+### What Cities has it been played in? 
 ```{python}
 cities = df_song["city"].dropna().unique()
 cities
 ```
 
+### Song Popularity Over Time
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("final_setlists_john_mayer.csv", parse_dates=["show_date"])
+
+song_name = "In Your Atmosphere"   # you can change this to any song
+
+df_song = df[df["song"] == song_name].dropna(subset=["show_date"])
+df_song = df_song.sort_values("show_date")
+
+plt.figure(figsize=(9, 5))
+plt.plot(df_song["show_date"], range(1, len(df_song)+1), marker="o")
+plt.xlabel("Date")
+plt.ylabel("Cumulative Plays")
+plt.title(f"Cumulative Live Performances of '{song_name}' Over Time")
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
+```
+
+# No More 3x5s - Wrapping it all up
+
+This was such an awesome project and it allowed me to work with 2 things that I love
+1. Data Science/Statistics
+2. John Mayer's Music
+
+Creating, exploring, and sharing this dataset helped me not just appreciate John Mayer more, but the way he is able to curate a setlist that captivates an audience! 
+
+
+
+
+
+# One More Thing: The top 10 openers and closers! 
+```{python}
+openers = (
+    df[df["is_opener"] == 1]
+    .groupby("song")["show_id"]
+    .nunique()
+    .sort_values(ascending=False)
+    .head(10)
+)
+
+closers = (
+    df[df["is_closer"] == 1]
+    .groupby("song")["show_id"]
+    .nunique()
+    .sort_values(ascending=False)
+    .head(10)
+)
+
+plt.figure(figsize=(9, 5))
+plt.barh(openers.index[::-1], openers.values[::-1], color="navy")
+plt.xlabel("Number of Times Used as Opener")
+plt.title("Top 10 Openers")
+plt.tight_layout()
+plt.show()
+
+plt.figure(figsize=(9, 5))
+plt.barh(closers.index[::-1], closers.values[::-1], color="maroon")
+plt.xlabel("Number of Times Used as Closer")
+plt.title("Top 10 Closers")
+plt.tight_layout()
+plt.show()
+```

@@ -247,22 +247,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#where-the-light-is" id="toc-where-the-light-is" class="nav-link active" data-scroll-target="#where-the-light-is">Where the Light is 🎸</a>
+  <li><a href="#where-the-light-is" id="toc-where-the-light-is" class="nav-link active" data-scroll-target="#where-the-light-is">Where the Light Is 🎸</a>
   <ul class="collapse">
-  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition">Data Acquisition</a></li>
-  <li><a href="#eda" id="toc-eda" class="nav-link" data-scroll-target="#eda">EDA</a>
+  <li><a href="#what-can-i-learn-about-how-john-mayer-builds-his-concert-setlists" id="toc-what-can-i-learn-about-how-john-mayer-builds-his-concert-setlists" class="nav-link" data-scroll-target="#what-can-i-learn-about-how-john-mayer-builds-his-concert-setlists"><strong>What can I learn about how John Mayer builds his concert setlists?</strong></a></li>
+  </ul></li>
+  <li><a href="#data-acquisition" id="toc-data-acquisition" class="nav-link" data-scroll-target="#data-acquisition">Data Acquisition</a>
+  <ul class="collapse">
+  <li><a href="#primary-api-used" id="toc-primary-api-used" class="nav-link" data-scroll-target="#primary-api-used"><strong>Primary API used</strong></a></li>
+  <li><a href="#secondary-api-attempted" id="toc-secondary-api-attempted" class="nav-link" data-scroll-target="#secondary-api-attempted"><strong>Secondary API (attempted)</strong></a></li>
+  <li><a href="#github-repo-code-data" id="toc-github-repo-code-data" class="nav-link" data-scroll-target="#github-repo-code-data"><strong>GitHub Repo (Code + Data)</strong></a></li>
+  </ul></li>
+  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
   <ul class="collapse">
   <li><a href="#most-common-songs" id="toc-most-common-songs" class="nav-link" data-scroll-target="#most-common-songs">Most Common Songs</a></li>
-  <li><a href="#where-he-visited-the-most" id="toc-where-he-visited-the-most" class="nav-link" data-scroll-target="#where-he-visited-the-most">Where He visited the Most</a></li>
-  <li><a href="#song-position-in-set-list-also-how-many-songs-were-in-each-concert" id="toc-song-position-in-set-list-also-how-many-songs-were-in-each-concert" class="nav-link" data-scroll-target="#song-position-in-set-list-also-how-many-songs-were-in-each-concert">Song Position in Set list (also how many songs were in each concert)</a></li>
-  <li><a href="#rarity-of-songs" id="toc-rarity-of-songs" class="nav-link" data-scroll-target="#rarity-of-songs">Rarity of Songs</a></li>
-  <li><a href="#unique-songs-over-time" id="toc-unique-songs-over-time" class="nav-link" data-scroll-target="#unique-songs-over-time">Unique Songs Over Time</a></li>
+  <li><a href="#cities-hes-visited-the-most" id="toc-cities-hes-visited-the-most" class="nav-link" data-scroll-target="#cities-hes-visited-the-most">Cities He’s visited the Most</a></li>
+  <li><a href="#distribution-of-song-positions-in-setlists" id="toc-distribution-of-song-positions-in-setlists" class="nav-link" data-scroll-target="#distribution-of-song-positions-in-setlists">Distribution of Song Positions in Setlists</a></li>
+  <li><a href="#rarest-songs" id="toc-rarest-songs" class="nav-link" data-scroll-target="#rarest-songs">Rarest Songs</a></li>
+  <li><a href="#growth-of-unique-songs-per-concert-over-time" id="toc-growth-of-unique-songs-per-concert-over-time" class="nav-link" data-scroll-target="#growth-of-unique-songs-per-concert-over-time">Growth of Unique Songs Per Concert over time</a></li>
   </ul></li>
-  <li><a href="#encore" id="toc-encore" class="nav-link" data-scroll-target="#encore">Encore</a>
+  <li><a href="#encore-a-mini-eda-of-my-favorite-song" id="toc-encore-a-mini-eda-of-my-favorite-song" class="nav-link" data-scroll-target="#encore-a-mini-eda-of-my-favorite-song">Encore: A mini EDA of my Favorite Song</a>
   <ul class="collapse">
-  <li><a href="#how-many-times-has-it-been-played-and-what-cities" id="toc-how-many-times-has-it-been-played-and-what-cities" class="nav-link" data-scroll-target="#how-many-times-has-it-been-played-and-what-cities">How many times has it been played? And what cities?</a></li>
+  <li><a href="#how-many-times-has-it-been-played" id="toc-how-many-times-has-it-been-played" class="nav-link" data-scroll-target="#how-many-times-has-it-been-played">How many times has it been played?</a></li>
+  <li><a href="#what-cities-has-it-been-played-in" id="toc-what-cities-has-it-been-played-in" class="nav-link" data-scroll-target="#what-cities-has-it-been-played-in">What Cities has it been played in?</a></li>
+  <li><a href="#song-popularity-over-time" id="toc-song-popularity-over-time" class="nav-link" data-scroll-target="#song-popularity-over-time">Song Popularity Over Time</a></li>
   </ul></li>
-  </ul></li>
+  <li><a href="#no-more-3x5s---wrapping-it-all-up" id="toc-no-more-3x5s---wrapping-it-all-up" class="nav-link" data-scroll-target="#no-more-3x5s---wrapping-it-all-up">No More 3x5s - Wrapping it all up</a></li>
+  <li><a href="#one-more-thing-the-top-10-openers-and-closers" id="toc-one-more-thing-the-top-10-openers-and-closers" class="nav-link" data-scroll-target="#one-more-thing-the-top-10-openers-and-closers">One More Thing: The top 10 openers and closers!</a></li>
   </ul>
 </nav>
     </div>
@@ -301,37 +311,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="where-the-light-is" class="level1">
-<h1>Where the Light is 🎸</h1>
-<p>John Mayer has long been my favorite music artist. From his tasteful guitar solos, to the beautiful songwriting and deep vocals. I’ve been to a few of his concerts and He always manages to pick the perfect set list for the vibe of the city. I’ve always wondered what the motivating factor is for musicians to put the songs they put in their concert setlists. So I decided to look into that a bit more! So my question in full is <strong>What can I learn about John Mayer’s Concert Setlists</strong></p>
+<h1>Where the Light Is 🎸</h1>
+<p>John Mayer has long been my favorite music artist!! from his tasteful guitar solos to his beautiful songwriting and vocal depth. I’ve been to a few of his concerts, and he always manages to choose a setlist that is unique while still makes sure we get all the hits. I wondered how those setlists stacked up against each other. That led to my motivating question:</p>
+<section id="what-can-i-learn-about-how-john-mayer-builds-his-concert-setlists" class="level3">
+<h3 class="anchored" data-anchor-id="what-can-i-learn-about-how-john-mayer-builds-his-concert-setlists"><strong>What can I learn about how John Mayer builds his concert setlists?</strong></h3>
+<p>Below, I walk through how I acquired the data and highlight the most interesting findings from my exploratory data analysis.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="JohnMayerin2019.png.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="JohnMayerin2019.png" class="img-fluid figure-img" style="width:50.0%"></p>
 <figcaption>John Mayer</figcaption>
 </figure>
 </div>
-<section id="data-acquisition" class="level2">
-<h2 class="anchored" data-anchor-id="data-acquisition">Data Acquisition</h2>
-<p>In order to have a dataset that I wanted, I needed to pull from two different APIs and Websites. I used Setlist.fm in order to look at different concert setlists. I also used Spotify’s API to look at the different metrics they use when creating algorithims. Both are free to use and I did so ethically There is a github repo at <a href="https://github.com/chamiltonb8/stat_386_music-John-Mayer">John Mayer Github Repo</a></p>
-<p>I originally intended to use Spotify’s api, however I couldn’t quite get it to work! So I just decided to use the Setlist.fm api. However, that link above will show some of my work with the Spotify api key.</p>
+<hr>
 </section>
-<section id="eda" class="level2">
-<h2 class="anchored" data-anchor-id="eda">EDA</h2>
-<p>Here is a short and sweet Data Analysis for my .csv file that I created! Mostly I learned about what were the most rare songs in his setlists, what the most popular songs were. where he played most of his shows in the last few years, and that some of his concerts only featured 1 song. Where as a few featured upwards of 25!</p>
-<div id="534688a3" class="cell" data-execution_count="1">
+</section>
+<section id="data-acquisition" class="level1">
+<h1>Data Acquisition</h1>
+<p>To build the dataset I wanted, I pulled from multiple online sources.</p>
+<section id="primary-api-used" class="level3">
+<h3 class="anchored" data-anchor-id="primary-api-used"><strong>Primary API used</strong></h3>
+<ul>
+<li><strong>Setlist.fm API</strong> — provided detailed information about each concert, including:
+<ul>
+<li>venue<br>
+</li>
+<li>city<br>
+</li>
+<li>tour<br>
+</li>
+<li>date<br>
+</li>
+<li>complete setlist<br>
+</li>
+<li>encore structure</li>
+</ul></li>
+</ul>
+</section>
+<section id="secondary-api-attempted" class="level3">
+<h3 class="anchored" data-anchor-id="secondary-api-attempted"><strong>Secondary API (attempted)</strong></h3>
+<p>I originally planned to also integrate: - <strong>Spotify Web API</strong> — for audio features like tempo, energy, valence, etc.</p>
+<p>Although I was able to access the api for Spotify, integrating the features cleanly took more time and effort than expected, so I proceeded with Setlist.fm alone for this version. My GitHub repo still includes the partial Spotify integration work. In a future project, I want to return to this analysis and add in those spotify features.</p>
+</section>
+<section id="github-repo-code-data" class="level3">
+<h3 class="anchored" data-anchor-id="github-repo-code-data"><strong>GitHub Repo (Code + Data)</strong></h3>
+<p>👉 <a href="https://github.com/chamiltonb8/stat_386_music-John-Mayer">John Mayer Setlist Project Repo</a></p>
+<hr>
+</section>
+</section>
+<section id="exploratory-data-analysis-eda" class="level1">
+<h1>Exploratory Data Analysis (EDA)</h1>
+<p>After cleaning and merging, my dataset contained: - most common songs<br>
+- rare songs<br>
+- concert cities<br>
+- set lengths<br>
+- song order behavior<br>
+- growth of his live catalog over time</p>
+<p>Below are some of the clearest insights.</p>
+<div id="d997d6d9" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows with audio features</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>audio_cols <span class="op">=</span> [<span class="st">"danceability"</span>, <span class="st">"energy"</span>, <span class="st">"valence"</span>, <span class="st">"tempo"</span>, <span class="st">"loudness"</span>]</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>audio_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> audio_cols <span class="cf">if</span> c <span class="kw">in</span> df.columns]</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df_audio <span class="op">=</span> df.dropna(subset<span class="op">=</span>audio_cols)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="1">
 <div>
@@ -443,10 +486,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="most-common-songs" class="level3">
-<h3 class="anchored" data-anchor-id="most-common-songs">Most Common Songs</h3>
-<p>Here is a chart of the most common songs from the tours that he did! I thought this was interesting since it shows some of his more popular songs. One that surprised me though is “Who Says” It’s a popular song, but it’s not one that I would consider one of his best! “Slow Dancing in a Burning Room” Works perfectly though.</p>
-<div id="251bc1a1" class="cell" data-execution_count="2">
+<section id="most-common-songs" class="level2">
+<h2 class="anchored" data-anchor-id="most-common-songs">Most Common Songs</h2>
+<p>Here are the most-played songs across all concerts in the dataset. What surprised me most is that “Who Says” appears much more often than I expected. (about 14 times)“Slow Dancing in a Burning Room” His most recognizalbe song is number one right where I would expect it to be.</p>
+<div id="7a01646d" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>song_counts <span class="op">=</span> (</span>
@@ -478,10 +521,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="where-he-visited-the-most" class="level3">
-<h3 class="anchored" data-anchor-id="where-he-visited-the-most">Where He visited the Most</h3>
-<p>John Mayer has visited Los Angeles the Most for his shows! this is a cool chart that also shows that Amsterdam was the second most visited.</p>
-<div id="8ea892d1" class="cell" data-execution_count="3">
+<section id="cities-hes-visited-the-most" class="level2">
+<h2 class="anchored" data-anchor-id="cities-hes-visited-the-most">Cities He’s visited the Most</h2>
+<p>John Mayer has visited Los Angeles the Most for his shows (He does have a house there)! this is a cool chart that also shows that Amsterdam was the second most visited.</p>
+<div id="2b6d47c9" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>city_counts <span class="op">=</span> (</span>
@@ -511,10 +554,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="song-position-in-set-list-also-how-many-songs-were-in-each-concert" class="level3">
-<h3 class="anchored" data-anchor-id="song-position-in-set-list-also-how-many-songs-were-in-each-concert">Song Position in Set list (also how many songs were in each concert)</h3>
+<section id="distribution-of-song-positions-in-setlists" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-of-song-positions-in-setlists">Distribution of Song Positions in Setlists</h2>
 <p>I found it cool that there were a few concerts that only had one song!</p>
-<div id="4f852f33" class="cell" data-execution_count="4">
+<div id="5281ed83" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
@@ -534,10 +577,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="rarity-of-songs" class="level3">
-<h3 class="anchored" data-anchor-id="rarity-of-songs">Rarity of Songs</h3>
-<p>And finally here are the most rare songs per performance</p>
-<div id="5ed9e4f8" class="cell" data-execution_count="5">
+<section id="rarest-songs" class="level2">
+<h2 class="anchored" data-anchor-id="rarest-songs">Rarest Songs</h2>
+<p>Here are the 20 rarest songs to hear at a John Mayer Concert!</p>
+<div id="90c7c24e" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -581,10 +624,10 @@ A Face to Call Home — rarity: 0.050</code></pre>
 </div>
 </div>
 </section>
-<section id="unique-songs-over-time" class="level3">
-<h3 class="anchored" data-anchor-id="unique-songs-over-time">Unique Songs Over Time</h3>
-<p>I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert</p>
-<div id="570fa040" class="cell" data-execution_count="6">
+<section id="growth-of-unique-songs-per-concert-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="growth-of-unique-songs-per-concert-over-time">Growth of Unique Songs Per Concert over time</h2>
+<p>How quickly does John’s live catalog grow? This line chart shows when each song first appeared and how his total number of unique songs increased over time.</p>
+<div id="13417289" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop missing dates</span></span>
@@ -629,10 +672,10 @@ A Face to Call Home — rarity: 0.050</code></pre>
 </div>
 </section>
 </section>
-<section id="encore" class="level2">
-<h2 class="anchored" data-anchor-id="encore">Encore</h2>
+<section id="encore-a-mini-eda-of-my-favorite-song" class="level1">
+<h1>Encore: A mini EDA of my Favorite Song</h1>
 <p>I love John Mayer, he is one of my inspirations. Being able to do an EDA on some of his work has been awesome! To wrap up, here is another EDA based on my favorite John Mayer Song: <em>In Your Atmosphere</em></p>
-<div id="e912ae21" class="cell" data-execution_count="7">
+<div id="677d1df0" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>song_name <span class="op">=</span> <span class="st">"In Your Atmosphere"</span></span>
@@ -750,9 +793,9 @@ A Face to Call Home — rarity: 0.050</code></pre>
 </div>
 </div>
 </div>
-<section id="how-many-times-has-it-been-played-and-what-cities" class="level3">
-<h3 class="anchored" data-anchor-id="how-many-times-has-it-been-played-and-what-cities">How many times has it been played? And what cities?</h3>
-<div id="a96ce21a" class="cell" data-execution_count="8">
+<section id="how-many-times-has-it-been-played" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-times-has-it-been-played">How many times has it been played?</h3>
+<div id="bb9c6c6a" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plays <span class="op">=</span> df_song[<span class="st">"show_id"</span>].nunique()</span>
@@ -762,7 +805,10 @@ A Face to Call Home — rarity: 0.050</code></pre>
 <pre><code>6</code></pre>
 </div>
 </div>
-<div id="64877e59" class="cell" data-execution_count="9">
+</section>
+<section id="what-cities-has-it-been-played-in" class="level3">
+<h3 class="anchored" data-anchor-id="what-cities-has-it-been-played-in">What Cities has it been played in?</h3>
+<div id="848cdcee" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cities <span class="op">=</span> df_song[<span class="st">"city"</span>].dropna().unique()</span>
@@ -773,12 +819,100 @@ A Face to Call Home — rarity: 0.050</code></pre>
       dtype=object)</code></pre>
 </div>
 </div>
+</section>
+<section id="song-popularity-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="song-popularity-over-time">Song Popularity Over Time</h3>
+<div id="f3236fff" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>song_name <span class="op">=</span> <span class="st">"In Your Atmosphere"</span>   <span class="co"># you can change this to any song</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df[df[<span class="st">"song"</span>] <span class="op">==</span> song_name].dropna(subset<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df_song.sort_values(<span class="st">"show_date"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>plt.plot(df_song[<span class="st">"show_date"</span>], <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df_song)<span class="op">+</span><span class="dv">1</span>), marker<span class="op">=</span><span class="st">"o"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Cumulative Plays"</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"Cumulative Live Performances of '</span><span class="sc">{</span>song_name<span class="sc">}</span><span class="ss">' Over Time"</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="data-acquisition_files/figure-html/cell-11-output-1.png" width="853" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="no-more-3x5s---wrapping-it-all-up" class="level1">
+<h1>No More 3x5s - Wrapping it all up</h1>
+<p>This was such an awesome project and it allowed me to work with 2 things that I love 1. Data Science/Statistics 2. John Mayer’s Music</p>
+<p>Creating, exploring, and sharing this dataset helped me not just appreciate John Mayer more, but the way he is able to curate a setlist that captivates an audience!</p>
+</section>
+<section id="one-more-thing-the-top-10-openers-and-closers" class="level1">
+<h1>One More Thing: The top 10 openers and closers!</h1>
+<div id="e15fd9ae" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>openers <span class="op">=</span> (</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"is_opener"</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    .nunique()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>closers <span class="op">=</span> (</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"is_closer"</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    .nunique()</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>plt.barh(openers.index[::<span class="op">-</span><span class="dv">1</span>], openers.values[::<span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span><span class="st">"navy"</span>)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Times Used as Opener"</span>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Openers"</span>)</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>plt.barh(closers.index[::<span class="op">-</span><span class="dv">1</span>], closers.values[::<span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span><span class="st">"maroon"</span>)</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Times Used as Closer"</span>)</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Closers"</span>)</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="data-acquisition_files/figure-html/cell-12-output-1.png" width="852" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="data-acquisition_files/figure-html/cell-12-output-2.png" width="852" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 <!-- -->
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1233,194 +1367,288 @@ A Face to Call Home — rarity: 0.050</code></pre>
     }
   });
   </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Data Acquisition Project: John Mayer Setlist Evolution"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Cameron Hamilton"</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-11-12"</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Where the Light is 🎸</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>John Mayer has long been my favorite music artist. From his tasteful guitar solos, to the beautiful songwriting and deep vocals. I've been to a few of his concerts and He always manages to pick the perfect set list for the vibe of the city. I've always wondered what the motivating factor is for musicians to put the songs they put in their concert setlists. So I decided to look into that a bit more! So my question in full is **What can I learn about John Mayer's Concert Setlists** </span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="al">![John Mayer](JohnMayerin2019.png.png)</span>{width=50% fig-align="center"}</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Acquisition </span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>In order to have a dataset that I wanted, I needed to pull from two different APIs and Websites. I used Setlist.fm in order to look at different concert setlists. I also used Spotify's API to look at the different metrics they use when creating algorithims. Both are free to use and I did so ethically There is a github repo at <span class="co">[</span><span class="ot">John Mayer Github Repo</span><span class="co">](https://github.com/chamiltonb8/stat_386_music-John-Mayer)</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>I originally intended to use Spotify's api, however I couldn't quite get it to work! So I just decided to use the Setlist.fm api. However, that link above will show some of my work with the Spotify api key. </span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## EDA </span></span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>Here is a short and sweet Data Analysis for my .csv file that I created! Mostly I learned about what were the most rare songs in his setlists, what the most popular songs were. where he played most of his shows in the last few years, and that some of his concerts only featured 1 song. Where as a few featured upwards of 25! </span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
-<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only rows with audio features</span></span>
-<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>audio_cols <span class="op">=</span> [<span class="st">"danceability"</span>, <span class="st">"energy"</span>, <span class="st">"valence"</span>, <span class="st">"tempo"</span>, <span class="st">"loudness"</span>]</span>
-<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>audio_cols <span class="op">=</span> [c <span class="cf">for</span> c <span class="kw">in</span> audio_cols <span class="cf">if</span> c <span class="kw">in</span> df.columns]</span>
-<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>df_audio <span class="op">=</span> df.dropna(subset<span class="op">=</span>audio_cols)</span>
-<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>df.head()</span>
-<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Most Common Songs</span></span>
-<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>Here is a chart of the most common songs from the tours that he did! I thought this was interesting since it shows some of his more popular songs. One that surprised me though is "Who Says" It's a popular song, but it's not one that I would consider one of his best! "Slow Dancing in a Burning Room" Works perfectly though. </span>
-<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>song_counts <span class="op">=</span> (</span>
-<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
-<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>      .nunique()</span>
-<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>      .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>      .head(<span class="dv">15</span>)</span>
-<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a><span class="co"># reverse for nicer top-to-bottom ordering</span></span>
-<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>songs <span class="op">=</span> song_counts.index.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> song_counts.values.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>plt.barh(songs, counts)</span>
-<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Shows Played"</span>)</span>
-<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Song"</span>)</span>
-<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 15 Most-Played Songs Across Shows"</span>)</span>
-<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a><span class="fu">### Where He visited the Most</span></span>
-<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>John Mayer has visited Los Angeles the Most for his shows! this is a cool chart that also shows that Amsterdam was the second most visited. </span>
-<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a>city_counts <span class="op">=</span> (</span>
-<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">"city"</span>)[<span class="st">"show_id"</span>]</span>
-<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>      .nunique()</span>
-<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a>      .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a>      .head(<span class="dv">10</span>)</span>
-<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
-<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>cities <span class="op">=</span> city_counts.index.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> city_counts.values.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>plt.barh(cities, counts)</span>
-<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Shows"</span>)</span>
-<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"City"</span>)</span>
-<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Cities for John Mayer Shows"</span>)</span>
-<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a><span class="fu">### Song Position in Set list (also how many songs were in each concert)</span></span>
-<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>I found it cool that there were a few concerts that only had one song! </span>
-<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">"position"</span>], bins<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>, df[<span class="st">"position"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">2</span>), edgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
-<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Song Position in Set"</span>)</span>
-<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span>
-<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Song Positions in Setlists"</span>)</span>
-<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a><span class="fu">### Rarity of Songs</span></span>
-<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a>And finally here are the most rare songs per performance</span>
-<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>)</span>
-<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a>rarity <span class="op">=</span> (</span>
-<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a>    df.dropna(subset<span class="op">=</span>[<span class="st">"rarity"</span>])</span>
-<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">"song"</span>)[<span class="st">"rarity"</span>]</span>
-<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>      .first()</span>
-<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a>      .sort_values()</span>
-<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🎸 Rarest John Mayer Songs in These Setlists:</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> song, r <span class="kw">in</span> rarity.head(<span class="dv">20</span>).items():  <span class="co"># top 20 rarest</span></span>
-<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss"> — rarity: </span><span class="sc">{</span>r<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a><span class="fu">### Unique Songs Over Time</span></span>
-<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a>I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert</span>
-<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop missing dates</span></span>
-<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"show_date"</span>]).copy()</span>
-<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort chronologically</span></span>
-<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2.sort_values(<span class="st">"show_date"</span>)</span>
-<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify when each song FIRST appeared</span></span>
-<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a>first_plays <span class="op">=</span> df2.groupby(<span class="st">"song"</span>)[<span class="st">"show_date"</span>].<span class="bu">min</span>().sort_values()</span>
-<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a><span class="co"># Create cumulative count over time</span></span>
-<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>first_plays_df <span class="op">=</span> (</span>
-<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a>    first_plays</span>
-<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
-<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a>    .rename(columns<span class="op">=</span>{<span class="st">"show_date"</span>: <span class="st">"first_play_date"</span>})</span>
-<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a>    .sort_values(<span class="st">"first_play_date"</span>)</span>
-<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a>first_plays_df[<span class="st">"cumulative_unique_songs"</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(first_plays_df) <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
-<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
-<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a>plt.plot(first_plays_df[<span class="st">"first_play_date"</span>],</span>
-<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>         first_plays_df[<span class="st">"cumulative_unique_songs"</span>],</span>
-<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a>         marker<span class="op">=</span><span class="st">"o"</span>, markersize<span class="op">=</span><span class="dv">3</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
-<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Cumulative Unique Songs"</span>)</span>
-<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Growth of John Mayer’s Live Song Catalog Over Time"</span>)</span>
-<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Encore</span></span>
-<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a>I love John Mayer, he is one of my inspirations. Being able to do an EDA on some of his work has been awesome! To wrap up, here is another EDA based on my favorite John Mayer Song: *In Your Atmosphere*</span>
-<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a>song_name <span class="op">=</span> <span class="st">"In Your Atmosphere"</span></span>
-<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df[df[<span class="st">"song"</span>].<span class="bu">str</span>.lower() <span class="op">==</span> song_name.lower()]</span>
-<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a>df_song.head()</span>
-<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### How many times has it been played? And what cities? </span></span>
-<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a>plays <span class="op">=</span> df_song[<span class="st">"show_id"</span>].nunique()</span>
-<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a>plays</span>
-<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a>cities <span class="op">=</span> df_song[<span class="st">"city"</span>].dropna().unique()</span>
-<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a>cities</span>
-<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Data Acquisition Project: John Mayer Setlist Evolution"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Cameron Hamilton"</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2025-11-12"</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co">  html:</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: true</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># Where the Light Is 🎸</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>John Mayer has long been my favorite music artist!! from his tasteful guitar solos to his beautiful songwriting and vocal depth. I’ve been to a few of his concerts, and he always manages to choose a setlist that is unique while still makes sure we get all the hits. I wondered how those setlists stacked up against each other. That led to my motivating question:</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### **What can I learn about how John Mayer builds his concert setlists?**</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>Below, I walk through how I acquired the data and highlight the most interesting findings from my exploratory data analysis.</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="al">![John Mayer](JohnMayerin2019.png)</span>{width=50% fig-align="center"}</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Acquisition </span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>To build the dataset I wanted, I pulled from multiple online sources.</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Primary API used**</span></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Setlist.fm API** — provided detailed information about each concert, including:</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>venue  </span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>city  </span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>tour  </span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>date  </span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>complete setlist  </span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>encore structure  </span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Secondary API (attempted)**</span></span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>I originally planned to also integrate:</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Spotify Web API** — for audio features like tempo, energy, valence, etc.</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>Although I was able to access the api for Spotify, integrating the features cleanly took more time and effort than expected, so I proceeded with Setlist.fm alone for this version. My GitHub repo still includes the partial Spotify integration work. In a future project, I want to return to this analysis and add in those spotify features. </span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="fu">### **GitHub Repo (Code + Data)**</span></span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>👉 <span class="co">[</span><span class="ot">John Mayer Setlist Project Repo</span><span class="co">](https://github.com/chamiltonb8/stat_386_music-John-Mayer)</span></span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a><span class="fu"># Exploratory Data Analysis (EDA)</span></span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>After cleaning and merging, my dataset contained:</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>most common songs  </span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>rare songs  </span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>concert cities  </span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>set lengths  </span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>song order behavior  </span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>growth of his live catalog over time  </span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>Below are some of the clearest insights.</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Most Common Songs</span></span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>Here are the most-played songs across all concerts in the dataset. What surprised me most is that “Who Says” appears much more often than I expected. (about 14 times)“Slow Dancing in a Burning Room” His most recognizalbe song is number one right where I would expect it to be. </span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>song_counts <span class="op">=</span> (</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>      .nunique()</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>      .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>      .head(<span class="dv">15</span>)</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a><span class="co"># reverse for nicer top-to-bottom ordering</span></span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>songs <span class="op">=</span> song_counts.index.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> song_counts.values.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>plt.barh(songs, counts)</span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Shows Played"</span>)</span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Song"</span>)</span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 15 Most-Played Songs Across Shows"</span>)</span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-97"><a href="#cb15-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-98"><a href="#cb15-98" aria-hidden="true" tabindex="-1"></a><span class="fu">## Cities He's visited the Most</span></span>
+<span id="cb15-99"><a href="#cb15-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-100"><a href="#cb15-100" aria-hidden="true" tabindex="-1"></a>John Mayer has visited Los Angeles the Most for his shows (He does have a house there)! this is a cool chart that also shows that Amsterdam was the second most visited. </span>
+<span id="cb15-101"><a href="#cb15-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-104"><a href="#cb15-104" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-105"><a href="#cb15-105" aria-hidden="true" tabindex="-1"></a>city_counts <span class="op">=</span> (</span>
+<span id="cb15-106"><a href="#cb15-106" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">"city"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb15-107"><a href="#cb15-107" aria-hidden="true" tabindex="-1"></a>      .nunique()</span>
+<span id="cb15-108"><a href="#cb15-108" aria-hidden="true" tabindex="-1"></a>      .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-109"><a href="#cb15-109" aria-hidden="true" tabindex="-1"></a>      .head(<span class="dv">10</span>)</span>
+<span id="cb15-110"><a href="#cb15-110" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-111"><a href="#cb15-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-112"><a href="#cb15-112" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb15-113"><a href="#cb15-113" aria-hidden="true" tabindex="-1"></a>cities <span class="op">=</span> city_counts.index.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb15-114"><a href="#cb15-114" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> city_counts.values.tolist()[::<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb15-115"><a href="#cb15-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-116"><a href="#cb15-116" aria-hidden="true" tabindex="-1"></a>plt.barh(cities, counts)</span>
+<span id="cb15-117"><a href="#cb15-117" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Shows"</span>)</span>
+<span id="cb15-118"><a href="#cb15-118" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"City"</span>)</span>
+<span id="cb15-119"><a href="#cb15-119" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Cities for John Mayer Shows"</span>)</span>
+<span id="cb15-120"><a href="#cb15-120" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-121"><a href="#cb15-121" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-122"><a href="#cb15-122" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-123"><a href="#cb15-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-124"><a href="#cb15-124" aria-hidden="true" tabindex="-1"></a><span class="fu">## Distribution of Song Positions in Setlists</span></span>
+<span id="cb15-125"><a href="#cb15-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-126"><a href="#cb15-126" aria-hidden="true" tabindex="-1"></a>I found it cool that there were a few concerts that only had one song! </span>
+<span id="cb15-127"><a href="#cb15-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-130"><a href="#cb15-130" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-131"><a href="#cb15-131" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb15-132"><a href="#cb15-132" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">"position"</span>], bins<span class="op">=</span><span class="bu">range</span>(<span class="dv">1</span>, df[<span class="st">"position"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">2</span>), edgecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb15-133"><a href="#cb15-133" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Song Position in Set"</span>)</span>
+<span id="cb15-134"><a href="#cb15-134" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span>
+<span id="cb15-135"><a href="#cb15-135" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Song Positions in Setlists"</span>)</span>
+<span id="cb15-136"><a href="#cb15-136" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-137"><a href="#cb15-137" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-138"><a href="#cb15-138" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-139"><a href="#cb15-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-140"><a href="#cb15-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-141"><a href="#cb15-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rarest Songs</span></span>
+<span id="cb15-142"><a href="#cb15-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-143"><a href="#cb15-143" aria-hidden="true" tabindex="-1"></a>Here are the 20 rarest songs to hear at a John Mayer Concert! </span>
+<span id="cb15-144"><a href="#cb15-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-147"><a href="#cb15-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-148"><a href="#cb15-148" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-149"><a href="#cb15-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-150"><a href="#cb15-150" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>)</span>
+<span id="cb15-151"><a href="#cb15-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-152"><a href="#cb15-152" aria-hidden="true" tabindex="-1"></a>rarity <span class="op">=</span> (</span>
+<span id="cb15-153"><a href="#cb15-153" aria-hidden="true" tabindex="-1"></a>    df.dropna(subset<span class="op">=</span>[<span class="st">"rarity"</span>])</span>
+<span id="cb15-154"><a href="#cb15-154" aria-hidden="true" tabindex="-1"></a>      .groupby(<span class="st">"song"</span>)[<span class="st">"rarity"</span>]</span>
+<span id="cb15-155"><a href="#cb15-155" aria-hidden="true" tabindex="-1"></a>      .first()</span>
+<span id="cb15-156"><a href="#cb15-156" aria-hidden="true" tabindex="-1"></a>      .sort_values()</span>
+<span id="cb15-157"><a href="#cb15-157" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-158"><a href="#cb15-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-159"><a href="#cb15-159" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"🎸 Rarest John Mayer Songs in These Setlists:</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb15-160"><a href="#cb15-160" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> song, r <span class="kw">in</span> rarity.head(<span class="dv">20</span>).items():  <span class="co"># top 20 rarest</span></span>
+<span id="cb15-161"><a href="#cb15-161" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss"> — rarity: </span><span class="sc">{</span>r<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb15-162"><a href="#cb15-162" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-163"><a href="#cb15-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-164"><a href="#cb15-164" aria-hidden="true" tabindex="-1"></a><span class="fu">## Growth of Unique Songs Per Concert over time</span></span>
+<span id="cb15-165"><a href="#cb15-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-166"><a href="#cb15-166" aria-hidden="true" tabindex="-1"></a>How quickly does John's live catalog grow? This line chart shows when each song first appeared and how his total number of unique songs increased over time.</span>
+<span id="cb15-167"><a href="#cb15-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-170"><a href="#cb15-170" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-171"><a href="#cb15-171" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop missing dates</span></span>
+<span id="cb15-172"><a href="#cb15-172" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">"show_date"</span>]).copy()</span>
+<span id="cb15-173"><a href="#cb15-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-174"><a href="#cb15-174" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort chronologically</span></span>
+<span id="cb15-175"><a href="#cb15-175" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2.sort_values(<span class="st">"show_date"</span>)</span>
+<span id="cb15-176"><a href="#cb15-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-177"><a href="#cb15-177" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify when each song FIRST appeared</span></span>
+<span id="cb15-178"><a href="#cb15-178" aria-hidden="true" tabindex="-1"></a>first_plays <span class="op">=</span> df2.groupby(<span class="st">"song"</span>)[<span class="st">"show_date"</span>].<span class="bu">min</span>().sort_values()</span>
+<span id="cb15-179"><a href="#cb15-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-180"><a href="#cb15-180" aria-hidden="true" tabindex="-1"></a><span class="co"># Create cumulative count over time</span></span>
+<span id="cb15-181"><a href="#cb15-181" aria-hidden="true" tabindex="-1"></a>first_plays_df <span class="op">=</span> (</span>
+<span id="cb15-182"><a href="#cb15-182" aria-hidden="true" tabindex="-1"></a>    first_plays</span>
+<span id="cb15-183"><a href="#cb15-183" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb15-184"><a href="#cb15-184" aria-hidden="true" tabindex="-1"></a>    .rename(columns<span class="op">=</span>{<span class="st">"show_date"</span>: <span class="st">"first_play_date"</span>})</span>
+<span id="cb15-185"><a href="#cb15-185" aria-hidden="true" tabindex="-1"></a>    .sort_values(<span class="st">"first_play_date"</span>)</span>
+<span id="cb15-186"><a href="#cb15-186" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-187"><a href="#cb15-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-188"><a href="#cb15-188" aria-hidden="true" tabindex="-1"></a>first_plays_df[<span class="st">"cumulative_unique_songs"</span>] <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(first_plays_df) <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb15-189"><a href="#cb15-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-190"><a href="#cb15-190" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb15-191"><a href="#cb15-191" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb15-192"><a href="#cb15-192" aria-hidden="true" tabindex="-1"></a>plt.plot(first_plays_df[<span class="st">"first_play_date"</span>],</span>
+<span id="cb15-193"><a href="#cb15-193" aria-hidden="true" tabindex="-1"></a>         first_plays_df[<span class="st">"cumulative_unique_songs"</span>],</span>
+<span id="cb15-194"><a href="#cb15-194" aria-hidden="true" tabindex="-1"></a>         marker<span class="op">=</span><span class="st">"o"</span>, markersize<span class="op">=</span><span class="dv">3</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb15-195"><a href="#cb15-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-196"><a href="#cb15-196" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb15-197"><a href="#cb15-197" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Cumulative Unique Songs"</span>)</span>
+<span id="cb15-198"><a href="#cb15-198" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Growth of John Mayer’s Live Song Catalog Over Time"</span>)</span>
+<span id="cb15-199"><a href="#cb15-199" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb15-200"><a href="#cb15-200" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-201"><a href="#cb15-201" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-202"><a href="#cb15-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-203"><a href="#cb15-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-204"><a href="#cb15-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-205"><a href="#cb15-205" aria-hidden="true" tabindex="-1"></a><span class="fu"># Encore: A mini EDA of my Favorite Song</span></span>
+<span id="cb15-206"><a href="#cb15-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-207"><a href="#cb15-207" aria-hidden="true" tabindex="-1"></a>I love John Mayer, he is one of my inspirations. Being able to do an EDA on some of his work has been awesome! To wrap up, here is another EDA based on my favorite John Mayer Song: *In Your Atmosphere*</span>
+<span id="cb15-208"><a href="#cb15-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-211"><a href="#cb15-211" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-212"><a href="#cb15-212" aria-hidden="true" tabindex="-1"></a>song_name <span class="op">=</span> <span class="st">"In Your Atmosphere"</span></span>
+<span id="cb15-213"><a href="#cb15-213" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df[df[<span class="st">"song"</span>].<span class="bu">str</span>.lower() <span class="op">==</span> song_name.lower()]</span>
+<span id="cb15-214"><a href="#cb15-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-215"><a href="#cb15-215" aria-hidden="true" tabindex="-1"></a>df_song.head()</span>
+<span id="cb15-216"><a href="#cb15-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-217"><a href="#cb15-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-218"><a href="#cb15-218" aria-hidden="true" tabindex="-1"></a><span class="fu">### How many times has it been played?</span></span>
+<span id="cb15-221"><a href="#cb15-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-222"><a href="#cb15-222" aria-hidden="true" tabindex="-1"></a>plays <span class="op">=</span> df_song[<span class="st">"show_id"</span>].nunique()</span>
+<span id="cb15-223"><a href="#cb15-223" aria-hidden="true" tabindex="-1"></a>plays</span>
+<span id="cb15-224"><a href="#cb15-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-225"><a href="#cb15-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-226"><a href="#cb15-226" aria-hidden="true" tabindex="-1"></a><span class="fu">### What Cities has it been played in? </span></span>
+<span id="cb15-229"><a href="#cb15-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-230"><a href="#cb15-230" aria-hidden="true" tabindex="-1"></a>cities <span class="op">=</span> df_song[<span class="st">"city"</span>].dropna().unique()</span>
+<span id="cb15-231"><a href="#cb15-231" aria-hidden="true" tabindex="-1"></a>cities</span>
+<span id="cb15-232"><a href="#cb15-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-233"><a href="#cb15-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-234"><a href="#cb15-234" aria-hidden="true" tabindex="-1"></a><span class="fu">### Song Popularity Over Time</span></span>
+<span id="cb15-235"><a href="#cb15-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-238"><a href="#cb15-238" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-239"><a href="#cb15-239" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-240"><a href="#cb15-240" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-241"><a href="#cb15-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-242"><a href="#cb15-242" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"final_setlists_john_mayer.csv"</span>, parse_dates<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb15-243"><a href="#cb15-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-244"><a href="#cb15-244" aria-hidden="true" tabindex="-1"></a>song_name <span class="op">=</span> <span class="st">"In Your Atmosphere"</span>   <span class="co"># you can change this to any song</span></span>
+<span id="cb15-245"><a href="#cb15-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-246"><a href="#cb15-246" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df[df[<span class="st">"song"</span>] <span class="op">==</span> song_name].dropna(subset<span class="op">=</span>[<span class="st">"show_date"</span>])</span>
+<span id="cb15-247"><a href="#cb15-247" aria-hidden="true" tabindex="-1"></a>df_song <span class="op">=</span> df_song.sort_values(<span class="st">"show_date"</span>)</span>
+<span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb15-250"><a href="#cb15-250" aria-hidden="true" tabindex="-1"></a>plt.plot(df_song[<span class="st">"show_date"</span>], <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(df_song)<span class="op">+</span><span class="dv">1</span>), marker<span class="op">=</span><span class="st">"o"</span>)</span>
+<span id="cb15-251"><a href="#cb15-251" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Date"</span>)</span>
+<span id="cb15-252"><a href="#cb15-252" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Cumulative Plays"</span>)</span>
+<span id="cb15-253"><a href="#cb15-253" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f"Cumulative Live Performances of '</span><span class="sc">{</span>song_name<span class="sc">}</span><span class="ss">' Over Time"</span>)</span>
+<span id="cb15-254"><a href="#cb15-254" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb15-255"><a href="#cb15-255" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-256"><a href="#cb15-256" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-257"><a href="#cb15-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb15-258"><a href="#cb15-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-259"><a href="#cb15-259" aria-hidden="true" tabindex="-1"></a><span class="fu"># No More 3x5s - Wrapping it all up</span></span>
+<span id="cb15-260"><a href="#cb15-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-261"><a href="#cb15-261" aria-hidden="true" tabindex="-1"></a>This was such an awesome project and it allowed me to work with 2 things that I love</span>
+<span id="cb15-262"><a href="#cb15-262" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Data Science/Statistics</span>
+<span id="cb15-263"><a href="#cb15-263" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>John Mayer's Music</span>
+<span id="cb15-264"><a href="#cb15-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-265"><a href="#cb15-265" aria-hidden="true" tabindex="-1"></a>Creating, exploring, and sharing this dataset helped me not just appreciate John Mayer more, but the way he is able to curate a setlist that captivates an audience! </span>
+<span id="cb15-266"><a href="#cb15-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-267"><a href="#cb15-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-268"><a href="#cb15-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-269"><a href="#cb15-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-270"><a href="#cb15-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-271"><a href="#cb15-271" aria-hidden="true" tabindex="-1"></a><span class="fu"># One More Thing: The top 10 openers and closers! </span></span>
+<span id="cb15-274"><a href="#cb15-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb15-275"><a href="#cb15-275" aria-hidden="true" tabindex="-1"></a>openers <span class="op">=</span> (</span>
+<span id="cb15-276"><a href="#cb15-276" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"is_opener"</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb15-277"><a href="#cb15-277" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb15-278"><a href="#cb15-278" aria-hidden="true" tabindex="-1"></a>    .nunique()</span>
+<span id="cb15-279"><a href="#cb15-279" aria-hidden="true" tabindex="-1"></a>    .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-280"><a href="#cb15-280" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb15-281"><a href="#cb15-281" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-282"><a href="#cb15-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-283"><a href="#cb15-283" aria-hidden="true" tabindex="-1"></a>closers <span class="op">=</span> (</span>
+<span id="cb15-284"><a href="#cb15-284" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"is_closer"</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb15-285"><a href="#cb15-285" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"song"</span>)[<span class="st">"show_id"</span>]</span>
+<span id="cb15-286"><a href="#cb15-286" aria-hidden="true" tabindex="-1"></a>    .nunique()</span>
+<span id="cb15-287"><a href="#cb15-287" aria-hidden="true" tabindex="-1"></a>    .sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-288"><a href="#cb15-288" aria-hidden="true" tabindex="-1"></a>    .head(<span class="dv">10</span>)</span>
+<span id="cb15-289"><a href="#cb15-289" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-290"><a href="#cb15-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-291"><a href="#cb15-291" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb15-292"><a href="#cb15-292" aria-hidden="true" tabindex="-1"></a>plt.barh(openers.index[::<span class="op">-</span><span class="dv">1</span>], openers.values[::<span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span><span class="st">"navy"</span>)</span>
+<span id="cb15-293"><a href="#cb15-293" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Times Used as Opener"</span>)</span>
+<span id="cb15-294"><a href="#cb15-294" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Openers"</span>)</span>
+<span id="cb15-295"><a href="#cb15-295" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-296"><a href="#cb15-296" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-297"><a href="#cb15-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-298"><a href="#cb15-298" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">9</span>, <span class="dv">5</span>))</span>
+<span id="cb15-299"><a href="#cb15-299" aria-hidden="true" tabindex="-1"></a>plt.barh(closers.index[::<span class="op">-</span><span class="dv">1</span>], closers.values[::<span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span><span class="st">"maroon"</span>)</span>
+<span id="cb15-300"><a href="#cb15-300" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Number of Times Used as Closer"</span>)</span>
+<span id="cb15-301"><a href="#cb15-301" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Top 10 Closers"</span>)</span>
+<span id="cb15-302"><a href="#cb15-302" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb15-303"><a href="#cb15-303" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb15-304"><a href="#cb15-304" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
