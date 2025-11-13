@@ -128,7 +128,7 @@ for song, r in rarity.head(20).items():  # top 20 rarest
 ```
 
 ### Unique Songs Over Time
-I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert. 
+I also wanted to quickly know how many unique songs he played over time! As time went on, he added a few more unique songs to each concert
 
 ```{python}
 # Drop missing dates
